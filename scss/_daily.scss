@@ -1,0 +1,359 @@
+.sliding-panel {
+  // basic full width/height fixed panel
+  position: fixed;
+  font-family: mono45-headline, monospace;
+  font-style: normal;
+  font-weight: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  color: #f5f5f5;
+  background-color: #3700B3;
+  // move the panel near the bottom initially
+  transform: translateY(90%);
+  // the css transition property will animate from the initial position to the new position
+  transition: transform .4s;
+  z-index: 10;
+
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-rows: 1fr 4fr;
+}
+
+/* class that will be added to move the panel up to the top of the screen and over the
+main section (try just adding this class to the sliding-panel section to see how this works;
+be sure to remove it after testing) */
+
+.slide {
+  transform: translateY(0);
+}
+
+
+.chevron {
+    grid-column: 2;
+    grid-row: 1;
+    width: 50px;
+    align-self: top;
+    margin-top: .5rem;
+    justify-self: center;
+  }
+
+  .daily {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 18px;
+    margin-top: 2.7rem;
+    justify-self: center;
+  }
+
+  .dailyinfo {
+    grid-column: 2;
+    grid-row: 2;
+
+    margin-top: -1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+  }
+
+  .dayZero {
+    grid-column: 1 / span 5; 
+    grid-row: 1;
+
+    margin-top: -.25rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    .todayHigh {
+      font-weight: 500;
+      font-size: 5rem;
+      grid-column: 1;
+      margin-top: -.75rem;
+    }
+
+    .todaySummary {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 0 0 0 .5rem;
+      color: #03DAC6;
+    }
+
+    .Precip {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 2.5rem 0 0 .5rem;
+      color: #03DAC6;
+    }
+
+    .todayPrecip {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 2.5rem 0 0 6.75rem;
+      color: #03DAC6;
+    }
+  }
+
+  .dayOne {
+    grid-column: 1 / span 5; 
+    grid-row: 2;
+
+    margin-top: -.5rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    .oneHigh {
+      font-weight: 500;
+      font-size: 5rem;
+      grid-column: 1;
+      margin-top: -.75rem;
+    }
+
+    .oneSummary {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 0 0 0 .5rem;
+      color: #03DAC6;
+    }
+
+    .Precip {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 2.5rem 0 0 .5rem;
+      color: #03DAC6;
+    }
+
+    .onePrecip {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 2.5rem 0 0 6.75rem;
+      color: #03DAC6;
+    }
+  }
+
+  .dayTwo {
+    grid-column: 1 / span 5; 
+    grid-row: 3;
+
+    margin-top: -1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    .twoHigh {
+      font-weight: 500;
+      font-size: 5rem;
+      grid-column: 1;
+      margin-top: -.75rem;
+    }
+
+    .twoSummary {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 0 0 0 .5rem;
+      color: #03DAC6;
+    }
+
+    .Precip {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 2.5rem 0 0 .5rem;
+      color: #03DAC6;
+    }
+
+    .twoPrecip {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 2.5rem 0 0 6.75rem;
+      color: #03DAC6;
+    }
+  }
+
+  .dayThree {
+    grid-column: 1 / span 5; 
+    grid-row: 4;
+
+    margin-top: -1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    .threeHigh {
+      font-weight: 500;
+      font-size: 5rem;
+      grid-column: 1;
+      margin-top: -.75rem;
+    }
+
+    .threeSummary {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 0 0 0 .5rem;
+      color: #03DAC6;
+    }
+
+    .Precip {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 2.5rem 0 0 .5rem;
+      color: #03DAC6;
+    }
+
+    .threePrecip {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 2.5rem 0 0 6.75rem;
+      color: #03DAC6;
+    }
+  }
+
+  .dayFour {
+    grid-column: 1 / span 5; 
+    grid-row: 5;
+
+    margin-top: -1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    .fourHigh {
+      font-weight: 500;
+      font-size: 5rem;
+      grid-column: 1;
+      margin-top: -.75rem;
+    }
+
+    .fourSummary {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 0 0 0 .5rem;
+      color: #03DAC6;
+    }
+
+    .Precip {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 2.5rem 0 0 .5rem;
+      color: #03DAC6;
+    }
+
+    .fourPrecip {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 2.5rem 0 0 6.75rem;
+      color: #03DAC6;
+    }
+  }
+
+  .dayFive {
+    grid-column: 1 / span 5; 
+    grid-row: 6;
+
+    margin-top: -1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    .fiveHigh {
+      font-weight: 500;
+      font-size: 5rem;
+      grid-column: 1;
+      margin-top: -.75rem;
+    }
+
+    .fiveSummary {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 0 0 0 .5rem;
+      color: #03DAC6;
+    }
+
+    .Precip {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 2.5rem 0 0 .5rem;
+      color: #03DAC6;
+    }
+
+    .fivePrecip {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 2.5rem 0 0 6.75rem;
+      color: #03DAC6;
+    }
+  }
+
+  .daySix {
+    grid-column: 1 / span 5; 
+    grid-row: 7;
+
+    margin-top: -1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    .sixHigh {
+      font-weight: 500;
+      font-size: 5rem;
+      grid-column: 1;
+      margin-top: -.75rem;
+    }
+
+    .sixSummary {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 0 0 0 .5rem;
+      color: #03DAC6;
+    }
+
+    .Precip {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 2.5rem 0 0 .5rem;
+      color: #03DAC6;
+    }
+
+    .sixPrecip {
+      font-weight: 100;
+      font-size: 16px;
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      margin: 2.5rem 0 0 6.75rem;
+      color: #03DAC6;
+    }
+  }

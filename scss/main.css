@@ -1,0 +1,53 @@
+header {
+  /* positioning the header above the content */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* grid layout */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr;
+  align-items: center;
+  justify-items: center;
+  /* visual design */
+  text-align: center;
+  background-color: #009688; }
+  header img {
+    width: 100%; }
+  @media only screen and (max-width: 600px) {
+    header .brisk {
+      width: 10%;
+      transform: rotate(90deg); } }
+  header p {
+    font-family: bree,sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color: #B2DFDB; }
+
+main {
+  padding: 3rem; }
+
+.slideUp {
+  animation-name: slideUp;
+  animation-duration: .4s;
+  animation-fill-mode: forwards; }
+
+.slideDown {
+  animation-name: slideDown;
+  animation-duration: .4s;
+  animation-fill-mode: forwards; }
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0%); }
+  100% {
+    transform: translateY(-100%); } }
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%); }
+  100% {
+    transform: translateY(0%); } }
+
+/*# sourceMappingURL=main.css.map */
